@@ -1,0 +1,29 @@
+.container {
+
+    padding: 1.5rem;
+    display: grid;
+    gap:2rem;
+}
+
+.titleHeader {
+    display: grid;
+    grid-template-columns:  repeat(7, minmax(0, 1fr));
+    border-bottom: 2px solid rgb(211,211,211);
+    align-items: center;
+}
+
+.headerText {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.formDiv {
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0, 1fr));
+    padding:0.8rem
+}
+
+.dropDownDiv {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0, 1fr));
+}

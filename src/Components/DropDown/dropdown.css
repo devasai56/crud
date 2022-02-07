@@ -1,0 +1,38 @@
+.dropdown {
+    display:flex; 
+    flex-direction:row; 
+    justify-content:space-between;
+    border: 1px solid rgb(211,211,211); 
+    padding:1rem;
+    border-radius: 0.3rem;
+}
+.options {
+    justify-content: flex-start;
+    align-items: center;
+    padding:0.3rem;
+    border-bottom:1px solid rgb(211,211,211);
+    
+}
+.optionDiv {
+    animation: drpdnanim 300ms ease-in-out forwards;
+    transform-origin: top center;
+    z-index: 99;
+    position: fixed;
+    border:1px solid rgb(211,211,211);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background-color: white;
+}
+
+@keyframes drpdnanim {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+    
+}

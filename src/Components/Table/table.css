@@ -1,0 +1,13 @@
+.oddRow {
+
+    background-color: white;
+    padding:1rem
+}
+
+.evenRow {
+    background-color:  rgb(211,211,211);
+}
+
+.table thead {
+    background-color: rgb(227,230,232);
+}
