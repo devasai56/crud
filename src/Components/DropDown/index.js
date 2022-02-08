@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import {FaChevronDown} from 'react-icons/fa'
 import './dropdown.css'
-const Select = ({height, width, title, style, options, onSelectCall}) => {
+const Select = ({height, width, title, style, options, onSelectCall, verifyKey}) => {
 
     const [visible, setVisible] = useState(false)
 
@@ -53,11 +53,11 @@ const Select = ({height, width, title, style, options, onSelectCall}) => {
     } else {
         setCheckedAll(false);
     }
-    onSelectCall && onSelectCall(checked)
+    onSelectCall && onSelectCall(checked, options, verifyKey)
       }, [checked]);
      
 
-    console.log(visible)
+    //console.log(visible)
 
     return (
     <>

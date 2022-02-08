@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './table.css'
-const Table = ({columns, data, checkAll}) => {
+import {FaTrash, FaPencilAlt} from 'react-icons/fa'
+const Table = ({columns, data, checkAll, actions, actionItems}) => {
     // console.log( "atable data", data, Array(data?.length || 0)?.keys())
     const [checkedAll, setCheckedAll] = useState(false);
     const [checked, setChecked] = useState({})
@@ -62,6 +63,9 @@ const Table = ({columns, data, checkAll}) => {
                     ))
 
                 }
+                {
+                    actions && (<th>Actions</th>)
+                }
             </thead>
             <tbody>
                 {
@@ -79,6 +83,17 @@ const Table = ({columns, data, checkAll}) => {
                                          <td align="left">{i[c?.dataIndex]}</td>
                                    )})
         
+                           }
+                           
+                           {
+                               actions && ( <div className='flex-row' style={{justifyContent:'center', alignItems:'center',padding:"0.4rem"}}>
+                                                {
+                                                    actionItems?.delete && (<td align='center'><div className='pointer-hover' style={{marginRight:'1rem'}} onClick={() => actionItems?.deleteCallBack(i.id)}><FaTrash color="rgb(73,80,87)" size={17}/></div></td>)
+                                                }
+                                                {
+                                                    actionItems?.edit && (<td align='center'><div className='pointer-hover' onClick={() => actionItems?.editCallBack(i.id)}><FaPencilAlt color="rgb(73,80,87)" size={17} /></div></td>)
+                                                }         
+                                            </div>)
                            }
                        </tr>)
                    } )

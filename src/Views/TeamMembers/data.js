@@ -40,3 +40,14 @@ export const companies = [
     }
 
 ]
+
+export const status = [
+    {
+        label: 'Active',
+        value:'active'
+    },
+    {
+        label:'Closed',
+        value:'closed'
+    }
+]
